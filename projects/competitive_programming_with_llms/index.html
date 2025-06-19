@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>TDA Augmented Competitive Programming with LLMs | The Bridge: A Research Focused Blog</title>
+<meta name="keywords" content="research, Machine Learning, Topological Data Analysis">
+<meta name="description" content="Abstract
+A concise summary of the post&rsquo;s content and significance.
+Introduction
+Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &rsquo;thinking&rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.">
+<meta name="author" content="map[education:map[courses:[map[course:BA in Mathematics and Physics institution:College of Wooster year:2024]]] interests:[Algebraic Topology Quantum Mechanics Multiversal Theory Advanced Computational Methods Non-Euclidean Geometry] name:Yohannes role:Researcher social:[map[icon:envelope icon_pack:fas link:mailto:yohannesabateneh@gmail.com] map[icon:twitter icon_pack:fab link:https://twitter.com/username] map[icon:google-scholar icon_pack:ai link:https://scholar.google.com/citations?user=username] map[icon:github icon_pack:fab link:https://github.com/yohAb-creator]]]">
+<link rel="canonical" href="https://yohab-creator.github.io/projects/competitive_programming_with_llms/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yohab-creator.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yohab-creator.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yohab-creator.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yohab-creator.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yohab-creator.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://yohab-creator.github.io/projects/competitive_programming_with_llms/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yohab-creator.github.io/projects/competitive_programming_with_llms/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="TDA Augmented Competitive Programming with LLMs">
+  <meta property="og:description" content="Abstract A concise summary of the post’s content and significance.
+Introduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in ’thinking’ in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-05-21T16:35:02-05:00">
+    <meta property="article:modified_time" content="2025-05-21T16:35:02-05:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Topological Data Analysis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TDA Augmented Competitive Programming with LLMs">
+<meta name="twitter:description" content="Abstract
+A concise summary of the post&rsquo;s content and significance.
+Introduction
+Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &rsquo;thinking&rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://yohab-creator.github.io/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "TDA Augmented Competitive Programming with LLMs",
+      "item": "https://yohab-creator.github.io/projects/competitive_programming_with_llms/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "TDA Augmented Competitive Programming with LLMs",
+  "name": "TDA Augmented Competitive Programming with LLMs",
+  "description": "Abstract A concise summary of the post\u0026rsquo;s content and significance.\nIntroduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in \u0026rsquo;thinking\u0026rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.\n",
+  "keywords": [
+    "research", "Machine Learning", "Topological Data Analysis"
+  ],
+  "articleBody": "Abstract A concise summary of the post’s content and significance.\nIntroduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in ’thinking’ in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.\nMathematical Background The mathematical framework we employ arises from the domain of Algebraic Topology, with particular emphasis on the construct of persistent homology. This tool enables us to extract and quantify topological features across multiple scales, offering a robust means of encoding the underlying structure of high-dimensional data—particularly the evolving landscape of reasoning trajectories within large language models.\nThe Boundary Homomorphism $\\partial_k$ Definition.\n[Group of k-chains] Given an oriented simplicial complex $\\mathcal{K}$, let $\\mathcal{B}_k$ be the set of all $k$-dimensional simplices in $\\mathcal{K}$. The group $C_k$ is defined to be the free abelian group with $\\mathcal{B}_k$ as its basis. A free abelian group F is a group where each element of the basis forms an infinite cyclic subgroup. That is \\[ \\simeq Z, \\quad x \\in B\\] where $\\simeq$ expresses an isomorphism, Z is the group of integers under addition, and B is the basis of the free abelian group. Additionally, \\[F= \\sum_{b \\in B} \\] and for $x \\in F$ \\[x = \\sum_{b \\in B} m_b b\\] where $m_b \\in Z$. As such, elements of $C_k$ are finite formal sums referred to as $k$-chains. A typical $k$-chain $c \\in C_k$ is given by, $$ c=\\sum_{i=0}^N a_i \\sigma_i $$ where $a_i \\in \\mathbb{Z}$ and $\\sigma_i$ is an oriented simplex of dimension $k$. Essentially, the group $C_k$ is the collection of all possible $k$-chains. $C_k$ is the group of all possible k-chains. Thus, the elements of $C_k$ are k-chains and not simplicies. The definition for the boundary map should be\nDefinition.\n[Boundary of a \\( k \\)-Simplex] For an oriented \\( k \\)-simplex \\( \\sigma \\in B_k \\), given by the convex hull of affinely independent points \\( (v_0, \\dots, v_k) \\), the boundary of \\( \\sigma \\) is \\[ \\partial_k(\\sigma) = \\sum_{i=0}^{k} (-1)^i (v_0, \\dots, \\hat{v}_i, \\dots, v_k) \\in C_{k-1}, \\] where \\( (v_0, \\dots, \\hat{v}_i, \\dots, v_k) \\) is the oriented \\( (k-1) \\)-simplex given by the convex hull of the points \\( \\{v_0, \\dots, v_{i-1}, v_{i+1}, \\dots, v_k\\} \\), the \\( i \\)-th face of \\( \\sigma \\). Definition.\n[\\( k \\)-th Boundary Map for \\( C_k \\)] For \\( k \\geq 0 \\), the \\( k \\)-th boundary map \\( \\partial_k : C_k \\rightarrow C_{k-1} \\) is the homomorphism defined by linearly extending the boundary of each basis element \\( \\sigma \\in B_k \\): for a \\( k \\)-chain \\( c = \\sum a_i \\sigma_i \\in C_k \\), where \\( \\sigma_i \\in B_k \\) and \\( a_i \\in \\mathbb{Z} \\), \\[ \\partial_k(c) = \\sum a_i \\partial_k(\\sigma_i). \\] Methodology The idea is to take the thoughts generated by the Tree of Thoughts framework and construct a thought space. We employ persistent homology to detect holes and topological features, i.e., 0-holes (connected components), 1-holes (loops), and higher-dimensional holes corresponding to more complex relationships. The next step is to identify persistent features across multiple problem-solving strategies, as these most likely represent essential subtasks conducive to solving the problem…\n",
+  "wordCount" : "570",
+  "inLanguage": "en",
+  "datePublished": "2025-05-21T16:35:02-05:00",
+  "dateModified": "2025-05-21T16:35:02-05:00",
+  "author":{
+    "@type": "Person",
+    "name": {"education":{"courses":[{"course":"BA in Mathematics and Physics","institution":"College of Wooster","year":2024}]},"interests":["Algebraic Topology","Quantum Mechanics","Multiversal Theory","Advanced Computational Methods","Non-Euclidean Geometry"],"name":"Yohannes","role":"Researcher","social":[{"icon":"envelope","icon_pack":"fas","link":"mailto:yohannesabateneh@gmail.com"},{"icon":"twitter","icon_pack":"fab","link":"https://twitter.com/username"},{"icon":"google-scholar","icon_pack":"ai","link":"https://scholar.google.com/citations?user=username"},{"icon":"github","icon_pack":"fab","link":"https://github.com/yohAb-creator"}]}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yohab-creator.github.io/projects/competitive_programming_with_llms/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Bridge: A Research Focused Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yohab-creator.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yohab-creator.github.io/" accesskey="h" title="The Bridge: A Research Focused Blog (Alt + H)">The Bridge: A Research Focused Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yohab-creator.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yohab-creator.github.io/projects/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yohab-creator.github.io/publications/" title="Publications">
+                    <span>Publications</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yohab-creator.github.io/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yohab-creator.github.io/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yohab-creator.github.io/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article>
+
+  
+
+  <h1>TDA Augmented Competitive Programming with LLMs</h1>
+
+  <p>May 21, 2025</p>
+
+  <p>By Yohannes (Researcher)</p>
+
+
+  
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      renderMathInElement(document.body, {
+
+        delimiters: [
+
+          {left: "$$", right: "$$", display: true},
+
+          {left: "\\[", right: "\\]", display: true}, 
+
+          {left: "$", right: "$", display: false},
+
+          {left: "\\(", right: "\\)", display: false} 
+
+        ]
+
+      });
+
+    });
+
+  </script>
+
+
+
+
+  <h2 id="abstract">Abstract</h2>
+<p>A concise summary of the post&rsquo;s content and significance.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &rsquo;thinking&rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.</p>
+<h2 id="mathematical-background">Mathematical Background</h2>
+<p>The mathematical framework we employ arises from the domain of Algebraic Topology, with particular emphasis on the construct of persistent homology. This tool enables us to extract and quantify topological features across multiple scales, offering a robust means of encoding the underlying structure of high-dimensional data—particularly the evolving landscape of reasoning trajectories within large language models.</p>
+<h3 id="the-boundary-homomorphism-partial_k">The Boundary Homomorphism $\partial_k$</h3>
+<p><div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [Group of k-chains]
+    Given an oriented simplicial complex $\mathcal{K}$, let $\mathcal{B}_k$ be the set of all $k$-dimensional simplices in $\mathcal{K}$. The group $C_k$ is defined to be the free abelian group with $\mathcal{B}_k$ as its basis. A free abelian group F is a group where each element of the basis forms an infinite cyclic subgroup. That is
+    \[&lt;x&gt; \simeq Z, \quad x \in B\]
+    where $\simeq$ expresses an isomorphism, Z is the group of integers under addition, and B is the basis of the free abelian group. Additionally,
+    \[F= \sum_{b \in B} &lt;b&gt;\] and for $x \in F$
+    \[x = \sum_{b \in B} m_b b\]
+    where $m_b \in Z$. As such, elements of $C_k$ are finite formal sums referred to as $k$-chains. A typical $k$-chain $c \in C_k$ is given by,
+
+$$
+c=\sum_{i=0}^N a_i \sigma_i
+$$
+
+where $a_i \in \mathbb{Z}$ and $\sigma_i$ is an oriented simplex of dimension $k$. Essentially, the group $C_k$ is the collection of all possible $k$-chains.
+
+    </div>
+</div>
+$C_k$ is the group of all possible k-chains. Thus, the elements of $C_k$ are k-chains and not simplicies. The definition for the boundary map should be</p>
+<div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [Boundary of a \( k \)-Simplex]
+For an oriented \( k \)-simplex \( \sigma \in B_k \), given by the convex hull of affinely independent points \( (v_0, \dots, v_k) \), the boundary of \( \sigma \) is  
+\[
+\partial_k(\sigma) = \sum_{i=0}^{k} (-1)^i (v_0, \dots, \hat{v}_i, \dots, v_k) \in C_{k-1},
+\]
+where \( (v_0, \dots, \hat{v}_i, \dots, v_k) \) is the oriented \( (k-1) \)-simplex given by the convex hull of the points \( \{v_0, \dots, v_{i-1}, v_{i+1}, \dots, v_k\} \), the \( i \)-th face of \( \sigma \).
+
+    </div>
+</div>
+<div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [\( k \)-th Boundary Map for \( C_k \)]
+For \( k \geq 0 \), the \( k \)-th boundary map \( \partial_k : C_k \rightarrow C_{k-1} \) is the homomorphism defined by linearly extending the boundary of each basis element \( \sigma \in B_k \): for a \( k \)-chain \( c = \sum a_i \sigma_i \in C_k \), where \( \sigma_i \in B_k \) and \( a_i \in \mathbb{Z} \),  
+\[
+\partial_k(c) = \sum a_i \partial_k(\sigma_i).
+\]
+
+    </div>
+</div>
+<h2 id="methodology">Methodology</h2>
+<p>The idea is to take the thoughts generated by the Tree of Thoughts framework and construct a thought space. We employ persistent homology to detect holes and topological features, i.e., 0-holes (connected components), 1-holes (loops), and higher-dimensional holes corresponding to more complex relationships. The next step is to identify persistent features across multiple problem-solving strategies, as these most likely represent essential subtasks conducive to solving the problem&hellip;</p>
+ 
+
+</article>
+
+
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://yohab-creator.github.io/">The Bridge: A Research Focused Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

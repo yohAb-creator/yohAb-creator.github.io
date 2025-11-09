@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on The Bridge: A Research Focused Blog</title>
+    <link>https://yohab-creator.github.io/tags/research/</link>
+    <description>Recent content in Research on The Bridge: A Research Focused Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 18:42:14 -0500</lastBuildDate>
+    <atom:link href="https://yohab-creator.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Topological Prompt Distillation</title>
+      <link>https://yohab-creator.github.io/projects/topological-prompt-distillation/</link>
+      <pubDate>Tue, 10 Jun 2025 18:42:14 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/projects/topological-prompt-distillation/</guid>
+      <description>&lt;h1 id=&#34;introduction-asking-the-right-question&#34;&gt;Introduction: Asking the Right Question&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM&amp;rsquo;s answer.&#xA;Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TDA Augmented Competitive Programming with LLMs</title>
+      <link>https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/</link>
+      <pubDate>Wed, 21 May 2025 16:35:02 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;A concise summary of the post&amp;rsquo;s content and significance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &amp;rsquo;thinking&amp;rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Research Post</title>
+      <link>https://yohab-creator.github.io/posts/my-first-research-post/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 -0400</pubDate>
+      <guid>https://yohab-creator.github.io/posts/my-first-research-post/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;A concise summary of the post&amp;rsquo;s content and significance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The context and background for this research exploration.&lt;/p&gt;&#xA;&lt;h2 id=&#34;theoretical-framework&#34;&gt;Theoretical Framework&lt;/h2&gt;&#xA;&lt;p&gt;$$ H\Psi = E\Psi $$&lt;/p&gt;&#xA;&lt;p&gt;Where $H$ represents the Hamiltonian operator and $\Psi$ the wave function.&lt;/p&gt;&#xA;&lt;h2 id=&#34;methodology&#34;&gt;Methodology&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# Example R code for data analysis&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;data &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#6639ba&#34;&gt;read.csv&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;measurements.csv&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model &lt;span style=&#34;color:#0550ae&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#6639ba&#34;&gt;lm&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;(&lt;/span&gt;response &lt;span style=&#34;color:#0550ae&#34;&gt;~&lt;/span&gt; predictor&lt;span style=&#34;color:#1f2328&#34;&gt;,&lt;/span&gt; data&lt;span style=&#34;color:#0550ae&#34;&gt;=&lt;/span&gt;data&lt;span style=&#34;color:#1f2328&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;summary&lt;/span&gt;&lt;span style=&#34;color:#1f2328&#34;&gt;(&lt;/span&gt;model&lt;span style=&#34;color:#1f2328&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

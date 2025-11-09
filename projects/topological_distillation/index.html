@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Introduction: Asking the Right Question# In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM’s answer. Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/projects/topological_distillation/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="Topological Prompt Distillation">
+  <meta property="og:description" content="Introduction: Asking the Right Question# In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM’s answer. Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-06-10T18:42:14-05:00">
+    <meta property="article:modified_time" content="2025-06-10T18:42:14-05:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Topological Data Analysis">
+
+
+  <meta itemprop="name" content="Topological Prompt Distillation">
+  <meta itemprop="description" content="Introduction: Asking the Right Question# In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM’s answer. Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.">
+  <meta itemprop="datePublished" content="2025-06-10T18:42:14-05:00">
+  <meta itemprop="dateModified" content="2025-06-10T18:42:14-05:00">
+  <meta itemprop="wordCount" content="527">
+  <meta itemprop="keywords" content="Research,Machine Learning,Topological Data Analysis">
+
+<title>Topological Prompt Distillation | The Bridge: A Research Focused Blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/projects/topological_distillation/">
+<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.45b6c9adf9994d699b39fd4b5358b9ff202e498278af72389b878473ab676f6d.js" integrity="sha256-RbbJrfmZTWmbOf1LU1i5/yAuSYJ4r3I4m4eEc6tnb20=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-projects">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>The Bridge: A Research Focused Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/posts/">Blog</a></li><li><a href="/projects/">Projects</a></li><li><a href="/publications/">Publications</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="https://github.com/yohAb-creator" target="_blank" rel="noopener">GitHub</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Topological Prompt Distillation</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#semantic-similarity">Semantic Similarity</a></li>
+    <li><a href="#semantic-significance">Semantic Significance</a></li>
+    <li><a href="#prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+
+<article>
+
+  
+
+  <h1>Topological Prompt Distillation</h1>
+
+  <p>Jun 10, 2025</p>
+
+  <p>By Yohannes (Researcher)</p>
+
+
+  
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      renderMathInElement(document.body, {
+
+        delimiters: [
+
+          {left: "$$", right: "$$", display: true},
+
+          {left: "\\[", right: "\\]", display: true}, 
+
+          {left: "$", right: "$", display: false},
+
+          {left: "\\(", right: "\\)", display: false} 
+
+        ]
+
+      });
+
+    });
+
+  </script>
+
+
+
+
+  <h1 id="introduction-asking-the-right-question">Introduction: Asking the Right Question<a class="anchor" href="#introduction-asking-the-right-question">#</a></h1>
+<hr>
+<p>In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM&rsquo;s answer.
+Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.</p>
+<h1 id="methodology-journey-from-text-to-structure">Methodology: Journey from Text to Structure<a class="anchor" href="#methodology-journey-from-text-to-structure">#</a></h1>
+<hr>
+<h2 id="semantic-similarity">Semantic Similarity<a class="anchor" href="#semantic-similarity">#</a></h2>
+<p>The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.</p>
+<h2 id="semantic-significance">Semantic Significance<a class="anchor" href="#semantic-significance">#</a></h2>
+<p>The next step is to prioritize sentences based on semantic significance. As the area I am considering is primarily competitive programming, I first initialize a dictionary composed of keys corresponding to the input, the operation, and the goal. The corresponding values for these keys include a range of terms common in competitive programming. The sentences are assigned scores based on how many relevant terms they contain and the frequency with which the words occur. Then, both the sentences and the sentence embeddings are sorted in their respective lists according to their scores.</p>
+<h2 id="prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)<a class="anchor" href="#prompt-distillation-with-topological-data-analysistda">#</a></h2>
+<p>Now comes the final leg of the journey. Presented with a prompt, we first split it into separate sentences. The sentences are then embedded into a vector as discussed previously. Since the more similar sentences are, the higher their cosine similarity will be(with a maximum score of 1), we can subtract the cosine similarity from 1 to create a notion of distance—more similar sentences lie closer together. Using this distance as a basis, we create a Vietoris-Rips Complex Filtration and track the first homology group. Then, 1-cycles that last above a certain threshold of &ldquo;time&rdquo; are taken to be persistent cycles. <br>
+The persistent cycles are then used to group the sentences making up the prompts into clusters based on which sentences belong to which persistent 1-cycles. Constraint sentences are determined through the presence of some common constraint words. In the case of a cluster containing multiple constraint sentences, only one constraint is picked as the others would just be redundant. Once we identify and make sure that the question and input sentences are included, we combine the sentences that passed through the distillation. The combined sentences are then passed through the semantic similarity filter to remove duplicates.</p>
+ 
+
+</article>
+
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#semantic-similarity">Semantic Similarity</a></li>
+    <li><a href="#semantic-significance">Semantic Significance</a></li>
+    <li><a href="#prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

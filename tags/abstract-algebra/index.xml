@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Abstract Algebra on The Bridge: A Research Focused Blog</title>
+    <link>http://localhost:1313/tags/abstract-algebra/</link>
+    <description>Recent content in Abstract Algebra on The Bridge: A Research Focused Blog</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:31:02 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/abstract-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lie Groups</title>
+      <link>http://localhost:1313/projects/lie_groups/</link>
+      <pubDate>Tue, 10 Jun 2025 20:31:02 -0500</pubDate>
+      <guid>http://localhost:1313/projects/lie_groups/</guid>
+      <description>&lt;h1 id=&#34;paper&#34;&gt;Paper&lt;/h1&gt;
+&lt;p&gt;This a paper I wrote in undergrad introducing the concept of Lie Groups and Lie Algebra.&lt;/p&gt;
+&lt;iframe src=&#34;http://localhost:1313/pdfs/Lie_GroupsFinalYA.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34;&gt;
+    &lt;p&gt;Your browser does not support PDFs. &lt;a href=&#34;http://localhost:1313/pdfs/Lie_GroupsFinalYA.pdf&#34;&gt;Download the PDF&lt;/a&gt;.&lt;/p&gt;
+&lt;/iframe&gt;</description>
+    </item>
+  </channel>
+</rss>

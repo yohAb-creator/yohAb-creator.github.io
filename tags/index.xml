@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The Bridge: A Research Focused Blog</title>
+    <link>https://yohab-creator.github.io/tags/</link>
+    <description>Recent content in Tags on The Bridge: A Research Focused Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 -0500</lastBuildDate>
+    <atom:link href="https://yohab-creator.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning</title>
+      <link>https://yohab-creator.github.io/tags/machine-learning/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://yohab-creator.github.io/tags/research/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Topological Data Analysis</title>
+      <link>https://yohab-creator.github.io/tags/topological-data-analysis/</link>
+      <pubDate>Tue, 10 Jun 2025 18:42:14 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/tags/topological-data-analysis/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

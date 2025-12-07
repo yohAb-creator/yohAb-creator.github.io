@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on The Bridge: A Research Focused Blog</title>
+    <link>https://yohab-creator.github.io/posts/</link>
+    <description>Recent content in Posts on The Bridge: A Research Focused Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 -0500</lastBuildDate>
+    <atom:link href="https://yohab-creator.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Research Post</title>
+      <link>https://yohab-creator.github.io/posts/my-first-research-post/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/posts/my-first-research-post/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Sparse vs Dense Retrieval (and why you want both)&lt;/p&gt;&#xA;&lt;p&gt;Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.&lt;/p&gt;&#xA;&lt;p&gt;Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.&lt;/p&gt;&#xA;&lt;p&gt;So:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sparse = precise but brittle&lt;/li&gt;&#xA;&lt;li&gt;Dense = flexible but fuzzy&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

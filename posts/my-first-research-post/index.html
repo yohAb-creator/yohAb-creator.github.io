@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abstract Sparse vs Dense Retrieval (and why you want both)
+Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.
+Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.
+So:
+Sparse = precise but brittle Dense = flexible but fuzzy A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://yohab-creator.github.io/posts/my-first-research-post/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="My First Research Post">
+  <meta property="og:description" content="Abstract Sparse vs Dense Retrieval (and why you want both)
+Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.
+Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.
+So:
+Sparse = precise but brittle Dense = flexible but fuzzy A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-05T00:00:00-05:00">
+    <meta property="article:modified_time" content="2025-12-05T00:00:00-05:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Machine Learning">
+
+
+  <meta itemprop="name" content="My First Research Post">
+  <meta itemprop="description" content="Abstract Sparse vs Dense Retrieval (and why you want both)
+Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.
+Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.
+So:
+Sparse = precise but brittle Dense = flexible but fuzzy A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:">
+  <meta itemprop="datePublished" content="2025-12-05T00:00:00-05:00">
+  <meta itemprop="dateModified" content="2025-12-05T00:00:00-05:00">
+  <meta itemprop="wordCount" content="141">
+  <meta itemprop="keywords" content="Research,Machine Learning">
+
+<title>My First Research Post | The Bridge: A Research Focused Blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://yohab-creator.github.io/posts/my-first-research-post/">
+<link rel="stylesheet" href="/book.min.aeec88a65f4c35ea5d280e12ad2e6ad3d4f284655b362d2cd0771f21cb8f6e12.css" integrity="sha256-ruyIpl9MNepdKA4SrS5q09TyhGVbNi0s0HcfIcuPbhI=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.5cb463107b15f6ac7df3de10e7490e9ab51759e9b84c6ae05469c11b4448cf1f.js" integrity="sha256-XLRjEHsV9qx9894Q50kOmrUXWem4TGrgVGnBG0RIzx8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>The Bridge: A Research Focused Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/posts/">Blog</a></li><li><a href="/projects/">Projects</a>
+<ul><li><a href="/projects/topological-prompt-distillation/">Topological Prompt Distillation</a></li><li><a href="/projects/tda-augmented-competitive-programming/">TDA Augmented Competitive Programming</a></li><li><a href="/projects/topological-tree-pruning/">Topological Tree Pruning</a></li></ul>
+</li><li><a href="/publications/">Publications</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="https://github.com/yohAb-creator" target="_blank" rel="noopener">GitHub</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>My First Research Post</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">machine learning</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    My First Research Post
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>December 5, 2025</span>
+  </div>
+
+
+
+
+  <div class="text-small">
+    By Yohannes
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/authors/yohannes/">Yohannes</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/research-notes/">Research Notes</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/research/">Research</a>, 
+      <a href="/tags/machine-learning/">Machine Learning</a>
+  </div>
+  
+
+
+  <div class="book-post-content markdown-inner"><h2 id="abstract">Abstract</h2>
+<p>Sparse vs Dense Retrieval (and why you want both)</p>
+<p>Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.</p>
+<p>Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.</p>
+<p>So:</p>
+<ul>
+<li>Sparse = precise but brittle</li>
+<li>Dense = flexible but fuzzy</li>
+</ul>
+<p>A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:</p>
+<ul>
+<li>docs that actually mention the thing, and</li>
+<li>docs that mean the thing.</li>
+</ul>
+<p>That’s how you stop the model from saying, “I couldn’t find 800°C, so here’s a random metallurgy paragraph.”</p>
+<p>I’m testing this pattern in a side project; if you handle technical docs, this is relevant.</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+  </div>
+  <div>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">machine learning</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

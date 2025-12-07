@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Introduction The tree of thoughts framework is a powerful method.
+Methodology: Semantic Similarity The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://yohab-creator.github.io/projects/topological-tree-pruning/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="Topological Tree Pruning">
+  <meta property="og:description" content="Introduction The tree of thoughts framework is a powerful method.
+Methodology: Semantic Similarity The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-12-05T18:42:14-05:00">
+    <meta property="article:modified_time" content="2024-12-05T18:42:14-05:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Topological Data Analysis">
+
+
+  <meta itemprop="name" content="Topological Tree Pruning">
+  <meta itemprop="description" content="Introduction The tree of thoughts framework is a powerful method.
+Methodology: Semantic Similarity The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.">
+  <meta itemprop="datePublished" content="2024-12-05T18:42:14-05:00">
+  <meta itemprop="dateModified" content="2024-12-05T18:42:14-05:00">
+  <meta itemprop="wordCount" content="421">
+  <meta itemprop="keywords" content="Research,Machine Learning,Topological Data Analysis">
+
+<title>Topological Tree Pruning | The Bridge: A Research Focused Blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://yohab-creator.github.io/projects/topological-tree-pruning/">
+<link rel="stylesheet" href="/book.min.aeec88a65f4c35ea5d280e12ad2e6ad3d4f284655b362d2cd0771f21cb8f6e12.css" integrity="sha256-ruyIpl9MNepdKA4SrS5q09TyhGVbNi0s0HcfIcuPbhI=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.5cb463107b15f6ac7df3de10e7490e9ab51759e9b84c6ae05469c11b4448cf1f.js" integrity="sha256-XLRjEHsV9qx9894Q50kOmrUXWem4TGrgVGnBG0RIzx8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-projects">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>The Bridge: A Research Focused Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/posts/">Blog</a></li><li><a href="/projects/">Projects</a>
+<ul><li><a href="/projects/topological-prompt-distillation/">Topological Prompt Distillation</a></li><li><a href="/projects/tda-augmented-competitive-programming/">TDA Augmented Competitive Programming</a></li><li><a href="/projects/topological-tree-pruning/">Topological Tree Pruning</a></li></ul>
+</li><li><a href="/publications/">Publications</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="https://github.com/yohAb-creator" target="_blank" rel="noopener">GitHub</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Topological Tree Pruning</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#semantic-similarity">Semantic Similarity</a></li>
+    <li><a href="#prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">Machine Learning</span>
+      
+      <span class="toc-meta__pill">Topological Data Analysis</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+
+
+<div class="post-layout">
+  <div class="reading-progress" data-reading-progress>
+    <div class="reading-progress__bar" data-progress-bar></div>
+  </div>
+
+  <article class="post">
+    <header class="post__header">
+      <p class="post__eyebrow">Research log</p>
+      <h1 class="post__title">Topological Tree Pruning</h1>
+
+      <div class="post__meta">
+        <span class="post__meta-item">Dec 5, 2024</span>
+        <span class="post__meta-separator">•</span>
+        <span class="post__meta-item">2 min read</span>
+
+        
+        
+          <span class="post__meta-separator">•</span>
+          <span class="post__meta-item">
+            
+              Yohannes
+            
+          </span>
+        
+
+        
+          <span class="post__meta-separator">•</span>
+          <span class="post__meta-item">
+            
+              research
+            
+              , Machine Learning
+            
+              , Topological Data Analysis
+            
+          </span>
+        
+
+        <span class="post__meta-separator">•</span>
+        <span class="post__meta-item post__views" data-view-counter data-view-key="projects_topological-tree-pruning">
+          <span data-view-count-number>—</span> views
+        </span>
+      </div>
+    </header>
+
+    <div class="post__body markdown">
+      <h1 id="introduction">Introduction</h1>
+<hr>
+<p>The tree of thoughts framework is a powerful method.</p>
+<h1 id="methodology">Methodology:</h1>
+<hr>
+<h2 id="semantic-similarity">Semantic Similarity</h2>
+<p>The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.</p>
+<p>## Semantic Significance</p>
+<p>The next step is to prioritize sentences based on semantic significance. As the area I am considering is primarily competitive programming, I first initialize a dictionary composed of keys corresponding to the input, the operation, and the goal. The corresponding values for these keys include a range of terms common in competitive programming. The sentences are assigned scores based on how many relevant terms they contain and the frequency with which the words occur. Then, both the sentences and the sentence embeddings are sorted in their respective lists according to their scores.</p>
+<h2 id="prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)</h2>
+<p>Now comes the final leg of the journey. Presented with a prompt, we first split it into separate sentences. The sentences are then embedded into a vector as discussed previously. Since the more similar sentences are, the higher their cosine similarity will be (with a maximum score of 1), we construct a notion of distance as follows</p>
+<p>$$ d = 1 - cs$$</p>
+<p>where cs stands for cosine similarity.</p>
+<p>Using this distance as a basis, we create a Vietoris-Rips Complex Filtration and track the first homology group. Then, 1-cycles that last above a certain threshold of &ldquo;time&rdquo; are taken to be persistent cycles. <br></p>
+<p>The persistent cycles are then used to group the sentences making up the prompts into clusters based on which sentences belong to which persistent 1-cycles. Constraint sentences are determined through the presence of some common constraint words. In the case of a cluster containing multiple constraint sentences, only one constraint is picked as the others would just be redundant. Once we identify and make sure that the question and input sentences are included, we combine the sentences that passed through the distillation. The combined sentences are then passed through the semantic similarity filter to remove duplicates.</p>
+
+    </div>
+  </article>
+</div>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\(", right: "\\)", display: false}
+        ]
+      });
+    });
+  </script>
+
+
+
+
+<script src="/js/post-enhancements.js" defer></script>
+
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#semantic-similarity">Semantic Similarity</a></li>
+    <li><a href="#prompt-distillation-with-topological-data-analysistda">Prompt Distillation with Topological Data Analysis(TDA)</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">Machine Learning</span>
+      
+      <span class="toc-meta__pill">Topological Data Analysis</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

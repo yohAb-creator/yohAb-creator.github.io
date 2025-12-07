@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abstract A concise summary of the post’s content and significance.
+Introduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in ’thinking’ in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="TDA Augmented Competitive Programming with LLMs">
+  <meta property="og:description" content="Abstract A concise summary of the post’s content and significance.
+Introduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in ’thinking’ in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-05-21T16:35:02-05:00">
+    <meta property="article:modified_time" content="2025-05-21T16:35:02-05:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Topological Data Analysis">
+
+
+  <meta itemprop="name" content="TDA Augmented Competitive Programming with LLMs">
+  <meta itemprop="description" content="Abstract A concise summary of the post’s content and significance.
+Introduction Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in ’thinking’ in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.">
+  <meta itemprop="datePublished" content="2025-05-21T16:35:02-05:00">
+  <meta itemprop="dateModified" content="2025-05-21T16:35:02-05:00">
+  <meta itemprop="wordCount" content="570">
+  <meta itemprop="keywords" content="Research,Machine Learning,Topological Data Analysis">
+
+<title>TDA Augmented Competitive Programming with LLMs | The Bridge: A Research Focused Blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/">
+<link rel="stylesheet" href="/book.min.aeec88a65f4c35ea5d280e12ad2e6ad3d4f284655b362d2cd0771f21cb8f6e12.css" integrity="sha256-ruyIpl9MNepdKA4SrS5q09TyhGVbNi0s0HcfIcuPbhI=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.5cb463107b15f6ac7df3de10e7490e9ab51759e9b84c6ae05469c11b4448cf1f.js" integrity="sha256-XLRjEHsV9qx9894Q50kOmrUXWem4TGrgVGnBG0RIzx8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-projects">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>The Bridge: A Research Focused Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/posts/">Blog</a></li><li><a href="/projects/">Projects</a>
+<ul><li><a href="/projects/topological-prompt-distillation/">Topological Prompt Distillation</a></li><li><a href="/projects/tda-augmented-competitive-programming/">TDA Augmented Competitive Programming</a></li><li><a href="/projects/topological-tree-pruning/">Topological Tree Pruning</a></li></ul>
+</li><li><a href="/publications/">Publications</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="https://github.com/yohAb-creator" target="_blank" rel="noopener">GitHub</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>TDA Augmented Competitive Programming with LLMs</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#mathematical-background">Mathematical Background</a>
+      <ul>
+        <li><a href="#the-boundary-homomorphism-partial_k">The Boundary Homomorphism $\partial_k$</a></li>
+      </ul>
+    </li>
+    <li><a href="#methodology">Methodology</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">Machine Learning</span>
+      
+      <span class="toc-meta__pill">Topological Data Analysis</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+
+
+<div class="post-layout">
+  <div class="reading-progress" data-reading-progress>
+    <div class="reading-progress__bar" data-progress-bar></div>
+  </div>
+
+  <article class="post">
+    <header class="post__header">
+      <p class="post__eyebrow">Research log</p>
+      <h1 class="post__title">TDA Augmented Competitive Programming with LLMs</h1>
+
+      <div class="post__meta">
+        <span class="post__meta-item">May 21, 2025</span>
+        <span class="post__meta-separator">•</span>
+        <span class="post__meta-item">3 min read</span>
+
+        
+        
+          <span class="post__meta-separator">•</span>
+          <span class="post__meta-item">
+            
+              Yohannes
+            
+          </span>
+        
+
+        
+          <span class="post__meta-separator">•</span>
+          <span class="post__meta-item">
+            
+              research
+            
+              , Machine Learning
+            
+              , Topological Data Analysis
+            
+          </span>
+        
+
+        <span class="post__meta-separator">•</span>
+        <span class="post__meta-item post__views" data-view-counter data-view-key="projects_tda-augmented-competitive-programming">
+          <span data-view-count-number>—</span> views
+        </span>
+      </div>
+    </header>
+
+    <div class="post__body markdown">
+      <h2 id="abstract">Abstract</h2>
+<p>A concise summary of the post&rsquo;s content and significance.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &rsquo;thinking&rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.</p>
+<h2 id="mathematical-background">Mathematical Background</h2>
+<p>The mathematical framework we employ arises from the domain of Algebraic Topology, with particular emphasis on the construct of persistent homology. This tool enables us to extract and quantify topological features across multiple scales, offering a robust means of encoding the underlying structure of high-dimensional data—particularly the evolving landscape of reasoning trajectories within large language models.</p>
+<h3 id="the-boundary-homomorphism-partial_k">The Boundary Homomorphism $\partial_k$</h3>
+<p><div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [Group of k-chains]
+    Given an oriented simplicial complex $\mathcal{K}$, let $\mathcal{B}_k$ be the set of all $k$-dimensional simplices in $\mathcal{K}$. The group $C_k$ is defined to be the free abelian group with $\mathcal{B}_k$ as its basis. A free abelian group F is a group where each element of the basis forms an infinite cyclic subgroup. That is
+    \[&lt;x&gt; \simeq Z, \quad x \in B\]
+    where $\simeq$ expresses an isomorphism, Z is the group of integers under addition, and B is the basis of the free abelian group. Additionally,
+    \[F= \sum_{b \in B} &lt;b&gt;\] and for $x \in F$
+    \[x = \sum_{b \in B} m_b b\]
+    where $m_b \in Z$. As such, elements of $C_k$ are finite formal sums referred to as $k$-chains. A typical $k$-chain $c \in C_k$ is given by,
+
+$$
+c=\sum_{i=0}^N a_i \sigma_i
+$$
+
+where $a_i \in \mathbb{Z}$ and $\sigma_i$ is an oriented simplex of dimension $k$. Essentially, the group $C_k$ is the collection of all possible $k$-chains.
+
+    </div>
+</div>
+$C_k$ is the group of all possible k-chains. Thus, the elements of $C_k$ are k-chains and not simplicies. The definition for the boundary map should be</p>
+<div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [Boundary of a \( k \)-Simplex]
+For an oriented \( k \)-simplex \( \sigma \in B_k \), given by the convex hull of affinely independent points \( (v_0, \dots, v_k) \), the boundary of \( \sigma \) is  
+\[
+\partial_k(\sigma) = \sum_{i=0}^{k} (-1)^i (v_0, \dots, \hat{v}_i, \dots, v_k) \in C_{k-1},
+\]
+where \( (v_0, \dots, \hat{v}_i, \dots, v_k) \) is the oriented \( (k-1) \)-simplex given by the convex hull of the points \( \{v_0, \dots, v_{i-1}, v_{i+1}, \dots, v_k\} \), the \( i \)-th face of \( \sigma \).
+
+    </div>
+</div>
+<div class="definition-block">
+    <p class="definition-title"><strong>Definition.</strong></p>
+    <div class="definition-content">
+        [\( k \)-th Boundary Map for \( C_k \)]
+For \( k \geq 0 \), the \( k \)-th boundary map \( \partial_k : C_k \rightarrow C_{k-1} \) is the homomorphism defined by linearly extending the boundary of each basis element \( \sigma \in B_k \): for a \( k \)-chain \( c = \sum a_i \sigma_i \in C_k \), where \( \sigma_i \in B_k \) and \( a_i \in \mathbb{Z} \),  
+\[
+\partial_k(c) = \sum a_i \partial_k(\sigma_i).
+\]
+
+    </div>
+</div>
+<h2 id="methodology">Methodology</h2>
+<p>The idea is to take the thoughts generated by the Tree of Thoughts framework and construct a thought space. We employ persistent homology to detect holes and topological features, i.e., 0-holes (connected components), 1-holes (loops), and higher-dimensional holes corresponding to more complex relationships. The next step is to identify persistent features across multiple problem-solving strategies, as these most likely represent essential subtasks conducive to solving the problem&hellip;</p>
+
+    </div>
+  </article>
+</div>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\(", right: "\\)", display: false}
+        ]
+      });
+    });
+  </script>
+
+
+
+
+<script src="/js/post-enhancements.js" defer></script>
+
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#mathematical-background">Mathematical Background</a>
+      <ul>
+        <li><a href="#the-boundary-homomorphism-partial_k">The Boundary Homomorphism $\partial_k$</a></li>
+      </ul>
+    </li>
+    <li><a href="#methodology">Methodology</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<div class="toc-meta">
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Authors</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Yohannes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Categories</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">Research Notes</span>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="toc-meta__group">
+    <div class="toc-meta__label">Tags</div>
+    <div class="toc-meta__items">
+      
+      <span class="toc-meta__pill">research</span>
+      
+      <span class="toc-meta__pill">Machine Learning</span>
+      
+      <span class="toc-meta__pill">Topological Data Analysis</span>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

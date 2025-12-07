@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on The Bridge: A Research Focused Blog</title>
+    <link>https://yohab-creator.github.io/</link>
+    <description>Recent content in Welcome on The Bridge: A Research Focused Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 -0500</lastBuildDate>
+    <atom:link href="https://yohab-creator.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Research Post</title>
+      <link>https://yohab-creator.github.io/posts/my-first-research-post/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/posts/my-first-research-post/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Sparse vs Dense Retrieval (and why you want both)&lt;/p&gt;&#xA;&lt;p&gt;Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.&lt;/p&gt;&#xA;&lt;p&gt;Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.&lt;/p&gt;&#xA;&lt;p&gt;So:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sparse = precise but brittle&lt;/li&gt;&#xA;&lt;li&gt;Dense = flexible but fuzzy&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Topological Prompt Distillation</title>
+      <link>https://yohab-creator.github.io/projects/topological-prompt-distillation/</link>
+      <pubDate>Tue, 10 Jun 2025 18:42:14 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/projects/topological-prompt-distillation/</guid>
+      <description>&lt;h1 id=&#34;introduction-asking-the-right-question&#34;&gt;Introduction: Asking the Right Question&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM&amp;rsquo;s answer.&#xA;Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TDA Augmented Competitive Programming with LLMs</title>
+      <link>https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/</link>
+      <pubDate>Wed, 21 May 2025 16:35:02 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/projects/tda-augmented-competitive-programming/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;A concise summary of the post&amp;rsquo;s content and significance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &amp;rsquo;thinking&amp;rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://yohab-creator.github.io/about/</link>
+      <pubDate>Thu, 01 May 2025 12:00:00 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/about/</guid>
+      <description>&lt;h1 id=&#34;hi-im-yohannes&#34;&gt;Hi, I’m Yohannes&lt;/h1&gt;&#xA;&lt;p&gt;Physicist and mathematician focused on computational modeling and topological methods. I study how structure arises from data—whether in the geometry of high-dimensional embeddings or the dynamics of physical systems. My work bridges theory and implementation, combining machine learning and algebraic topology to build models that explain and predict.&lt;/p&gt;&#xA;&lt;p&gt;Currently, I’m exploring how topological tools can extract generalized reasoning pathways from and for Large Language Models.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-im-working-on&#34;&gt;What I’m working on&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Topology for LLMs:&lt;/strong&gt; extracting stable “reasoning shapes” inside model activations.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Geometric ML:&lt;/strong&gt; using manifold-based priors to keep models faithful to structure.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scientific tooling:&lt;/strong&gt; building lean pipelines for experiments, visualization, and reproducibility.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;BA in Mathematics and Physics — College of Wooster (2024)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;interests&#34;&gt;Interests&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Algebraic Topology · Algebraic Geometry · Topological Data Analysis&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning · Differential Geometry · Advanced Computational Methods&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;selected-highlights&#34;&gt;Selected highlights&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Topological Prompt Distillation:&lt;/strong&gt; using persistent homology to prune prompts while preserving downstream accuracy.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;TDA-augmented competitive programming:&lt;/strong&gt; exploring topology as a lens on algorithm behavior and generalization.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Geometry-first visualizations:&lt;/strong&gt; building interactive demos that explain complex models with minimal friction.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;lets-collaborate&#34;&gt;Let’s collaborate&lt;/h2&gt;&#xA;&lt;p&gt;I enjoy pairing with researchers and engineers on experiments, prototypes, and visualization-heavy writeups. If you have an idea worth testing, let’s make it tangible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Topological Tree Pruning</title>
+      <link>https://yohab-creator.github.io/projects/topological-tree-pruning/</link>
+      <pubDate>Thu, 05 Dec 2024 18:42:14 -0500</pubDate>
+      <guid>https://yohab-creator.github.io/projects/topological-tree-pruning/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;The tree of thoughts framework is a powerful method.&lt;/p&gt;&#xA;&lt;h1 id=&#34;methodology&#34;&gt;Methodology:&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;semantic-similarity&#34;&gt;Semantic Similarity&lt;/h2&gt;&#xA;&lt;p&gt;The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://yohab-creator.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yohab-creator.github.io/contact/</guid>
+      <description>&lt;p&gt;For professional inquiries, collaborations, or other questions, please feel free to reach out via the methods below.&lt;/p&gt;&#xA;&lt;h3 id=&#34;email&#34;&gt;Email&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:yohannesabateneh@gmail.com&#34;&gt;yohannesabateneh@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;professional-profiles&#34;&gt;Professional Profiles&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/yohAb-creator&#34;&gt;yohAb-creator&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Linkedin:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/yohannes-abateneh-193612201/&#34;&gt;Yohannes Abateneh&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

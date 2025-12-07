@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://yohab-creator.github.io/categories/research-notes/">
+  <meta property="og:site_name" content="The Bridge: A Research Focused Blog">
+  <meta property="og:title" content="Research Notes">
+  <meta property="og:description" content="Advanced research across disciplinary boundaries">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Research Notes">
+  <meta itemprop="description" content="Advanced research across disciplinary boundaries">
+  <meta itemprop="datePublished" content="2025-12-05T00:00:00-05:00">
+  <meta itemprop="dateModified" content="2025-12-05T00:00:00-05:00">
+
+<title>Research Notes | The Bridge: A Research Focused Blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://yohab-creator.github.io/categories/research-notes/">
+<link rel="stylesheet" href="/book.min.aeec88a65f4c35ea5d280e12ad2e6ad3d4f284655b362d2cd0771f21cb8f6e12.css" integrity="sha256-ruyIpl9MNepdKA4SrS5q09TyhGVbNi0s0HcfIcuPbhI=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.5cb463107b15f6ac7df3de10e7490e9ab51759e9b84c6ae05469c11b4448cf1f.js" integrity="sha256-XLRjEHsV9qx9894Q50kOmrUXWem4TGrgVGnBG0RIzx8=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://yohab-creator.github.io/categories/research-notes/index.xml" title="The Bridge: A Research Focused Blog" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-term book-type-categories">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>The Bridge: A Research Focused Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+<ul><li><a href="/posts/">Blog</a></li><li><a href="/projects/">Projects</a>
+<ul><li><a href="/projects/topological-prompt-distillation/">Topological Prompt Distillation</a></li><li><a href="/projects/tda-augmented-competitive-programming/">TDA Augmented Competitive Programming</a></li><li><a href="/projects/topological-tree-pruning/">Topological Tree Pruning</a></li></ul>
+</li><li><a href="/publications/">Publications</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul><li><a href="https://github.com/yohAb-creator" target="_blank" rel="noopener">GitHub</a></li></ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Research Notes</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/my-first-research-post/">My First Research Post</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>December 5, 2025</span>
+  </div>
+
+
+
+
+  <div class="text-small">
+    By Yohannes
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/authors/yohannes/">Yohannes</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/research-notes/">Research Notes</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/research/">Research</a>, 
+      <a href="/tags/machine-learning/">Machine Learning</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h2 id="abstract">Abstract</h2>
+<p>Sparse vs Dense Retrieval (and why you want both)</p>
+<p>Sparse retrieval (BM25, etc.) matches on actual words/tokens. Great when the query contains the right terms (units, alloys, “800°C”, specific standards). Bad when the wording drifts.</p>
+<p>Dense retrieval (embeddings) matches on meaning. Great when the user says it differently than the doc. Bad when it pulls things that are “vaguely about the topic” but not the exact thing.</p>
+<p>So:</p>
+<ul>
+<li>Sparse = precise but brittle</li>
+<li>Dense = flexible but fuzzy</li>
+</ul>
+<p>A hybrid RAG setup runs both, then fuses the results (RRF / weighted merge). You get:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/projects/topological-prompt-distillation/">Topological Prompt Distillation</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>June 10, 2025</span>
+  </div>
+
+
+
+
+  <div class="text-small">
+    By Yohannes
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/authors/yohannes/">Yohannes</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/research-notes/">Research Notes</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/research/">Research</a>, 
+      <a href="/tags/machine-learning/">Machine Learning</a>, 
+      <a href="/tags/topological-data-analysis/">Topological Data Analysis</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h1 id="introduction-asking-the-right-question">Introduction: Asking the Right Question</h1>
+<hr>
+<p>In order to receive an answer, one must first ask a question. This concept also holds when it comes to our interaction with Large Language Models(LLMs)— to receive a desirable answer, we must first provide a prompt that is adequately crafted. The prompt needs to contain just enough information to guide the LLM towards the correct solution, while also avoiding extraneous information that might derail the LLM&rsquo;s answer.
+Crafting a perfect prompt might be challenging due to various reasons, including a prompt encapsulating some other text. A solution for this problem is to distill existing prompts down to their most critical components, a method referred to as prompt compression.</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/projects/tda-augmented-competitive-programming/">TDA Augmented Competitive Programming with LLMs</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>May 21, 2025</span>
+  </div>
+
+
+
+
+  <div class="text-small">
+    By Yohannes
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/authors/yohannes/">Yohannes</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/research-notes/">Research Notes</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/research/">Research</a>, 
+      <a href="/tags/machine-learning/">Machine Learning</a>, 
+      <a href="/tags/topological-data-analysis/">Topological Data Analysis</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h2 id="abstract">Abstract</h2>
+<p>A concise summary of the post&rsquo;s content and significance.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Despite their apparent capacity for reasoning, current large language models (LLMs) do not engage in &rsquo;thinking&rsquo; in the conventional cognitive sense. Fundamentally, they are autoregressive probabilistic systems: they generate output by selecting the next token based on statistical correlations with preceding tokens. This mechanism, while capable of producing coherent and contextually rich language, lacks true intentionality, abstract awareness, or internal representation of goals, beliefs, or logical continuity beyond learned statistical patterns.</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/projects/topological-tree-pruning/">Topological Tree Pruning</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>December 5, 2024</span>
+  </div>
+
+
+
+
+  <div class="text-small">
+    By Yohannes
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/authors/yohannes/">Yohannes</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/research-notes/">Research Notes</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/research/">Research</a>, 
+      <a href="/tags/machine-learning/">Machine Learning</a>, 
+      <a href="/tags/topological-data-analysis/">Topological Data Analysis</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h1 id="introduction">Introduction</h1>
+<hr>
+<p>The tree of thoughts framework is a powerful method.</p>
+<h1 id="methodology">Methodology:</h1>
+<hr>
+<h2 id="semantic-similarity">Semantic Similarity</h2>
+<p>The first step in the journey involved in changing a prompt into a structured instruction is to filter redundant sentences through the use of semantic similarity. The way I did this was through the use of cosine similarity on the embeddings of the sentences. We start by considering a single sentence embedding and appending it to an empty list. As we iteratively go through the other sentences, we check the similarity between them and the other embeddings contained in the list. Sentence embeddings with cosine similarity less than some threshold value are appended to the list, while embeddings with a similarity score higher than the threshold are discarded.</p></div>
+  </article>
+  
+
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Authors</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/authors/yohannes/">Yohannes</a>
+          <span>4</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/research-notes/">Research Notes</a>
+          <span>4</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Series</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tags/machine-learning/">Machine Learning</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tags/research/">Research</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tags/topological-data-analysis/">Topological Data Analysis</a>
+          <span>3</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
